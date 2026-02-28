@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: trustora-backend
+    env: node
+    rootDir: backend
+    buildCommand: npm install && if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: NODE_ENV
+        value: production
+      # REMINDER: Add these variables manually in the Render Dashboard
+      # - key: FRONTEND_URL
+      # - key: GEMINI_API_KEY
+      # - key: HUGGINGFACE_API_KEY
