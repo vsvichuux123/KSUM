@@ -1,0 +1,118 @@
+.requests-page {
+    min-height: 100vh;
+    padding: 88px 0 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 32px;
+    gap: 20px;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.requests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 20px;
+}
+
+.request-card {
+    padding: 24px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.req-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.verifier-info {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.verifier-logo {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+
+.verifier-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.verifier-info h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.req-body {
+    flex: 1;
+}
+
+.req-docs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.req-doc-pill {
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--glass-border);
+}
+
+.req-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 16px;
+}
+
+.ai-insight {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ai-icon {
+    font-size: 1.2rem;
+}
+
+.view-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--purple-light);
+}
+
+@media (max-width: 600px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

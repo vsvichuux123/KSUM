@@ -1,0 +1,13 @@
+node_modules/
+.env
+uploads/
+vault_cache.json
+test_hash.txt
+test_blockchain_cert.txt
+trustora_test.txt
+blockchain_ledger.json
+.DS_Store
+dist/
+build/
+*.log
+.gemini/

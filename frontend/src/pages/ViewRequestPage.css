@@ -1,0 +1,198 @@
+.view-request-page {
+    padding: 88px 0 60px;
+}
+
+.view-header h1 {
+    font-size: 1.8rem;
+}
+
+.back-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: var(--text-primary);
+}
+
+.view-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.verifier-profile {
+    text-align: center;
+    padding: 32px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.large-logo {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    overflow: hidden;
+}
+
+.large-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.requested-docs-list {
+    padding: 24px;
+}
+
+.requested-docs-list h3 {
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+.requested-doc-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.guardian-room {
+    position: sticky;
+    top: 88px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.guardian-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.ai-status {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.ai-avatar {
+    width: 44px;
+    height: 44px;
+    background: var(--purple-main);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.risk-pill {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.risk-pill.Low {
+    background: rgba(0, 230, 118, 0.15);
+    color: #00e676;
+}
+
+.risk-pill.Medium {
+    background: rgba(255, 196, 0, 0.15);
+    color: #ffc400;
+}
+
+.risk-pill.High {
+    background: rgba(255, 23, 68, 0.15);
+    color: #ff1744;
+}
+
+.agent-insights {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.insight-block {
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border-left: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.insight-block.highlight {
+    background: rgba(144, 98, 240, 0.05);
+    border-left-color: var(--purple-light);
+}
+
+.insight-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.insight-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.insight-score {
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.risk-factors {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 0.85rem;
+    color: #ff9e9e;
+}
+
+.risk-factors li {
+    margin-bottom: 4px;
+}
+
+.recommendation-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background: var(--purple-main);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.token-display {
+    background: #000;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--green-success);
+}
+
+@media (max-width: 900px) {
+    .view-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .guardian-room {
+        position: static;
+    }
+}

@@ -1,0 +1,6 @@
+[dotenv@17.3.1] injecting env (2) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+⚠️  Firebase Admin: serviceAccountKey.json NOT found. Running in mock/limited mode.
+
+🛡️  Trustora Backend running at http://localhost:5000
+📡  CORS enabled for: http://localhost:5173
+

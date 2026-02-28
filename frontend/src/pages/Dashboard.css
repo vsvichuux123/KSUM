@@ -1,0 +1,149 @@
+﻿.dashboard {
+    min-height: 100vh;
+    padding: 100px 0 60px;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.dash-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    gap: 24px;
+}
+
+.dash-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.stat-card {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.stat-card.highlight {
+    border-color: var(--purple-light);
+    background: rgba(124, 58, 237, 0.08);
+}
+
+.stat-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--text-primary);
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.pulse-dot {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 8px;
+    height: 8px;
+    background: var(--red-danger);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--red-danger);
+    animation: alertPulse 2s infinite;
+}
+
+.card-link-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+
+@keyframes alertPulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.creds-section {
+    margin-top: 60px;
+}
+
+.mb-section-head {
+    margin-bottom: 24px;
+}
+
+.creds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 24px;
+}
+
+.empty-state {
+    padding: 60px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: 24px;
+    opacity: 0.5;
+}
+
+@media (max-width: 992px) {
+    .dash-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .creds-grid {
+        grid-template-columns: 1fr;
+    }
+}
